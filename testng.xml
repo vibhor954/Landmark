@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LandmarkTestSuite" >
+    
+ 	<listeners>
+ 		<listener class-name="listener.AnnotationTransformer"/>
+        <listener class-name="listener.TestListener"/>
+ 	</listeners>
+ 	
+    <test name="LandmarkTestAuto" group-by-instances="true" preserve-order="true">
+        <classes>
+            <class name="LoginTest"/>
+            <class name="Opportunity.Dashboard.DashboardTest"/>
+            <class name="Opportunity.NewOpportunityTest">
+            <methods>
+                <include name="verifyNewOpportunityNavigation"/>
+                <include name="verifyNewOpportunityHeaderLabel"/>
+                <include name="verifySalesInformationLabel"/>
+                <include name="verifyVendorInfoLabel"/>
+                <include name="verifyLotsLabel"/>
+                <include name="verifyNotesLabel"/>
+                <include name="verifyAttachmentsLabel"/>
+                <include name="verifyAddSalesInformation"/>
+                <include name="verifyAddVendorInfo"/>
+                <include name="verifyAddLotsInfo"/>
+                <include name="verifyLotSummaryPageHeaderLabels"/>
+                <include name="verifyLotSummaryPageValues"/>
+                <include name="verifyAddAttachments"/>
+                <include name="verifyAttachments"/>
+                <include name="verifyAddNotes"/>
+                <include name="verifyNotes"/>
+            </methods>
+            </class>
+            <class name="Opportunity.Opp_Record_Listing_Info.ListingInfoTest">
+                <methods>
+                    <include name="verifyListingTypeOptions"/>
+                    <include name="verifyClassifiedListingType"/>
+                    <include name="verifyBidAndOfferListingType"/>
+                    <include name="verifyListingTypeSelection"/>
+                    <include name="verifyListingInfoNavigation"/>
+                    <include name="verifyFillingListingOverviewDetails"/>
+                    <include name="verifyFillingWeightsSummaryDetails"/>
+                    <include name="verifyFillingAssessmentOverviewDetails"/>
+                    <include name="verifyFillingBreedingOverviewDetails"/>
+                    <include name="verifyFillingHealthVetDetails"/>
+                    <include name="verifyFillingDeliveryDetails"/>
+                    <include name="verifyFillingLiveWeightDetails"/>
+                    <include name="verifyPublishListing"/>
+                </methods>
+            </class>
+            <class name="Opportunity.Opp_Record_Listing_Info.ListingInfoClassifiedTest">
+                <methods>
+                    <include name="CreateOpportunityForClassified"/>
+                    <include name="verifyListingTypeSelectionClassified"/>
+                    <include name="verifyListingInfoNavigationClassified"/>
+                    <include name="verifyFillingClassifiedListingOverviewDetails"/>
+                    <include name="verifyFillingClassifiedLotDetails"/>
+                    <include name="verifyFillingClassifiedHealthVetDetails"/>
+                    <include name="verifyClassifiedPublishListing"/>
+                </methods>
+            </class>
+            <class name="E_Contract.Econtract_Creation_Wizard.NewContractTest">
+                <methods>
+                    <include name="verifyOpportunityIdNavigationFromGridPage"/>
+                    <include name="verifyNewContractNavigationFromListingPage"/>
+                    <include name="verifyFillingNewContract"/>
+                </methods>
+            </class>
+            <class name="E_Contract.Econtract_Creation_Wizard.NewContractDashboardTest">
+                <methods>
+                    <include name="verifyNewContractNavigation"/>
+                    <include name="verifyNewContractHeaderLabel"/>
+                    <include name="verifyNewContractSalesInformationLabel"/>
+                    <include name="verifyNewContractVendorInfoLabel"/>
+                    <include name="verifyBuyerInfoLabel"/>
+                    <include name="verifyDeliveryInfoLabel"/>
+                    <include name="verifyNewContractLotsLabel"/>
+                    <include name="verifyAdditionalChargesLabel"/>
+                    <include name="verifyCommissionAndAgentsLabel"/>
+                    <include name="verifyNewContractNotesLabel"/>
+                    <include name="verifyNewContractAttachmentsLabel"/>
+                    <include name="verifyNewContractAddSalesInformation"/>
+                    <include name="verifyNewContractAddVendorInfo"/>
+                    <include name="verifyAddBuyerInfo"/>
+                    <include name="verifyAddDeliveryInfo"/>
+                    <include name="verifyNewContractAddLotsInfo"/>
+                    <include name="verifyAddAdditionalCharges"/>
+                    <include name="verifyAddCommissionAndAgents"/>
+                    <include name="verifyNewContractAddAttachments"/>
+                    <include name="verifyNewContractAttachments"/>
+                    <include name="verifyNewContractAddNotes"/>
+                    <include name="verifyNewContractNotes"/>
+                    <include name="verifyValidateContract"/>
+                </methods>
+            </class>
+            <class name="Opportunity.NewOpportunityConditionalTest">
+                <methods>
+                    <include name="VerifyAddingSalesAndVendorInfo"/>
+                    <include name="verifyPerKGConditionInLot"/>
+                    <include name="verifyAddingValueToPerKGFieldInLot"/>
+                    <include name="verifyWeightValueOnLotGridPage"/>
+                    <include name="verifyAddingSecondLotInTheSameOpportunity"/>
+                    <include name="verifyDisabledListingType"/>
+                    <include name="VerifyEditingLotsInfo"/>
+                    <include name="VerifyDeletingLot"/>
+                    <include name="verifyEnabledListingType"/>
+                </methods>
+            </class>
+            <class name="Opportunity.Opp_Record_Listing_Info.ListingInfoSheepBidAndOfferTest">
+                <methods>
+                    <include name="verifyBidAndOfferListingTypeSelection"/>
+                    <include name="verifyFillingListingOverviewDetailsForSheep"/>
+                    <include name="verifyFillingWeightsSummaryDetailsForSheep"/>
+                    <include name="verifyFillingAssessmentOverviewDetailsForSheep"/>
+                    <include name="verifyFillingLambsAtFootDetailsForSheep"/>
+                    <include name="verifyFillingBreedingOverviewDetailsForSheep"/>
+                    <include name="verifyFillingWoolSkinDetailsForSheep"/>
+                    <include name="verifyFillingJoiningDetailsForSheep"/>
+                    <include name="verifyFillingHealthVetDetailsForSheep"/>
+                    <include name="verifyFillingAccreditationDetailsForSheep"/>
+                    <include name="verifyFillingDeliveryDetailsForSheep"/>
+                    <include name="verifyFillingLiveWeightDetailsForSheep"/>
+                    <include name="verifyPublishListingForSheep"/>
+                </methods>
+            </class>
+            <class name="Opportunity.Opp_Record_Listing_Info.ListingInfoSheepClassified">
+                <methods>
+                    <include name="verifyListingTypeSelectionClassifiedSheep"/>
+                    <include name="verifyListingInfoNavigationClassifiedSheep"/>
+                    <include name="verifyFillingClassifiedListingOverviewDetailsSheep"/>
+                    <include name="verifyFillingClassifiedLotDetailsSheep"/>
+                    <include name="verifyFillingClassifiedHealthVetDetailsSheep"/>
+                    <include name="verifyFillingClassifiedAccreditationDetailsForSheep"/>
+                    <include name="verifyClassifiedPublishListingSheep"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
